@@ -654,21 +654,28 @@
 /* ===================== */
 @media print {
   @page {
-    margin: 10mm;
+    margin: 15mm;
     size: A4;
   }
 
   body {
     background-color: #fff !important;
     color: #000 !important;
+    font-family: serif !important;
     -webkit-print-color-adjust: exact !important;
     print-color-adjust: exact !important;
   }
 
+  /* Hide UI elements */
   .theme-switcher-btn,
   .resume-footer,
   .video-embed-wrapper,
-  .video-label-row {
+  .video-label-row,
+  .status-indicator,
+  .port-label,
+  .timeline-badge,
+  .experience-timeline::before,
+  .store-links {
     display: none !important;
   }
 
@@ -678,128 +685,196 @@
     margin: 0 !important;
   }
 
-  .resume-grid {
-    display: block !important; /* Stack columns for printing */
-  }
-
   .resume-header {
-    padding-bottom: 1rem !important;
-    margin-bottom: 1.5rem !important;
+    border-bottom: 1px solid #000 !important;
+    padding-bottom: 0.5rem !important;
+    margin-bottom: 1rem !important;
+    display: block !important;
+    text-align: center !important;
   }
 
-  .resume-main-col {
-    gap: 1rem !important;
+  .user-name {
+    font-size: 2rem !important;
+    color: #000 !important;
+    margin-bottom: 0.25rem !important;
   }
 
-  .resume-side-col {
-    gap: 1rem !important;
-    margin-top: 1rem !important;
+  .user-title {
+    font-size: 1.2rem !important;
+    color: #333 !important;
+    margin-bottom: 0.5rem !important;
+  }
+
+  .header-meta-left, .header-meta-right {
+    display: block !important;
+    text-align: center !important;
+  }
+
+  .contact-ports {
+    display: inline-flex !important;
+    justify-content: center !important;
+    flex-direction: row !important;
+    flex-wrap: wrap !important;
+    gap: 0.75rem !important;
+  }
+
+  .contact-port-link, .user-subtitle {
+    font-size: 0.9rem !important;
+    color: #000 !important;
+  }
+
+  .resume-grid {
+    display: block !important;
+  }
+
+  .resume-main-col, .resume-side-col {
+    display: block !important;
+  }
+
+  /* Section Titles */
+  .classic-section {
+    margin-bottom: 1.25rem !important;
   }
 
   .classic-section-title {
-    margin-bottom: 0.5rem !important;
+    font-size: 1.1rem !important;
     color: #000 !important;
-    border-left-color: #666 !important;
-  }
-
-  .timeline-job-block {
-    margin-bottom: 1rem !important;
-    break-inside: avoid;
-  }
-
-  .project-detail-card {
-    padding: 0.75rem !important;
+    border-bottom: 1px solid #ccc !important;
+    border-left: none !important;
+    padding-left: 0 !important;
     margin-bottom: 0.75rem !important;
-    break-inside: avoid;
-    border: 1px solid #ccc !important;
-    box-shadow: none !important;
-    background-color: transparent !important;
   }
 
-  .project-title {
+  /* Experience layout */
+  .timeline-job-block {
+    padding-left: 0 !important;
+    margin-bottom: 1.5rem !important;
+    break-inside: auto !important;
+  }
+
+  .timeline-job-block:nth-child(2) {
+    break-before: page !important;
+    page-break-before: always !important;
+  }
+
+  .job-info-header {
+    display: block !important;
+    margin-bottom: 0.25rem !important;
+  }
+
+  .timeline-company {
+    display: block !important;
+    font-size: 1.1rem !important;
+    font-weight: bold !important;
     color: #000 !important;
-    border-bottom-color: #ccc !important;
-    margin-bottom: 0.5rem !important;
-    padding-bottom: 0.25rem !important;
   }
   
-  .spec-text {
-    color: #333 !important;
-    font-size: 0.85rem !important;
-    line-height: 1.4 !important;
+  .timeline-company::after {
+    content: none !important;
   }
 
-  .highlighted-output-text {
-    background-color: transparent !important;
-    padding: 0 !important;
-    border-left: none !important;
+  .timeline-meta {
+    display: block !important;
+    margin-top: 0.15rem !important;
+  }
+
+  .timeline-role {
+    display: inline !important;
+    font-size: 1rem !important;
+    font-weight: normal !important;
+    color: #333 !important;
+  }
+
+  .timeline-role::after {
+    content: " | ";
+  }
+
+  .timeline-period {
+    display: inline !important;
+    font-size: 1rem !important;
+    color: #666 !important;
     font-weight: normal !important;
   }
 
-  .side-skill-card,
-  .side-tool-card {
-    break-inside: avoid;
-    border: 1px solid #ccc !important;
-    box-shadow: none !important;
+  .job-tech-stack {
+    border: none !important;
     background-color: transparent !important;
-    padding: 0.75rem !important;
-    margin-bottom: 0.75rem !important;
+    padding: 0 !important;
+    margin-bottom: 0.5rem !important;
+    font-size: 0.9rem !important;
+    font-style: italic !important;
+    color: #333 !important;
+  }
+
+  .tech-stack-label {
+    display: none !important;
+  }
+
+  .job-bullets-list {
+    margin: 0 0 0.5rem 0 !important;
+    gap: 0.25rem !important;
+  }
+
+  .job-bullet-item {
+    font-size: 0.9rem !important;
+    line-height: 1.4 !important;
+    color: #000 !important;
+  }
+
+  .job-bullet-item::before {
+    color: #000 !important;
+  }
+
+  /* Skills & Tools */
+  .skills-stack-list, .side-tools-list {
+    display: block !important;
+  }
+
+  .side-skill-card, .side-tool-card {
+    border: none !important;
+    padding: 0 !important;
+    margin-bottom: 0.5rem !important;
+    background-color: transparent !important;
+    break-inside: avoid;
+  }
+
+  .side-skill-card h5, .side-tool-card h6 {
+    display: inline !important;
+    font-size: 0.95rem !important;
+    font-weight: bold !important;
+    color: #000 !important;
+    margin: 0 !important;
+  }
+
+  .side-skill-card h5::after {
+    content: ": ";
+  }
+
+  .side-tag-list {
+    display: inline !important;
   }
 
   .side-tag-chip {
-    border: 1px solid #999 !important;
-    color: #333 !important;
+    border: none !important;
     background-color: transparent !important;
-  }
-
-  .store-badge-classic {
-    border: 1px solid #ccc !important;
-    background-color: transparent !important;
-    color: #333 !important;
-  }
-
-  .user-name, .timeline-company {
+    padding: 0 !important;
+    margin-right: 0.25rem !important;
+    font-size: 0.9rem !important;
     color: #000 !important;
   }
 
-  .timeline-role, .metrics-label, .side-skill-card h5 {
-    color: #333 !important;
+  .side-tag-chip::after {
+    content: ",";
   }
 
-  .timeline-badge {
-    background-color: #666 !important;
-    border-color: #fff !important;
-    box-shadow: none !important;
+  .side-tag-chip:last-child::after {
+    content: "";
   }
 
-  .experience-timeline::before {
-    background-color: #ccc !important;
-  }
-
-  /* Only append URLs if they are not already visible, and keep it clean */
-  .store-links a[href]::after {
-    content: " (" attr(href) ")";
-    font-size: 0.6rem;
-    color: #666;
-    word-break: break-all;
-  }
-
-  .job-tech-stack {
-    background-color: transparent !important;
-    border: 1px solid #ccc !important;
-    color: #333 !important;
-    padding: 0.5rem !important;
-    margin-bottom: 0.75rem !important;
-  }
-  .tech-stack-label {
+  .tool-desc-short {
+    font-size: 0.9rem !important;
     color: #000 !important;
-  }
-  .job-bullet-item {
-    color: #333 !important;
-    font-size: 0.85rem !important;
-    line-height: 1.4 !important;
-  }
-  .job-bullet-item::before {
-    color: #666 !important;
+    margin-top: 0.25rem !important;
+    padding-left: 1rem !important;
   }
 }

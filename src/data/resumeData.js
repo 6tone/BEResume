@@ -28,7 +28,7 @@ export const resumeData = {
       },
       {
         name: "DevOps & Cloud (雲端與維運)",
-        items: ["AWS (EC2, S3, CloudFront, CloudWatch)", "Docker", "PM2 (Process Management)", "GitLab CI/CD", "Git Flow", "Jira"]
+        items: ["AWS (EC2, S3, CloudFront, CloudWatch)", "Docker", "PM2 (Process Management)", "Jenkins (CI/CD)", "GitLab CI/CD", "Git Flow", "Jira"]
       },
       {
         name: "Security & Integrations (安全機制與外部整合)",

@@ -1,0 +1,42 @@
+# ============================================================
+# [BEResume] — AI Development Rules
+# ============================================================
+# SETUP INSTRUCTIONS (delete this block after filling in):
+# 1. Replace [BEResume] with your actual project name.
+# 2. Replace [Node.js + MongoDB + React] with your stack (e.g. Node.js + MongoDB + React).
+# 3. Copy the entire .ai/ directory into this project.
+# 4. Search for all [PLACEHOLDER] tags in the skill files and fill them in.
+# ============================================================
+
+## Project Context
+
+- **Project**: [BEResume]
+- **Stack**: [Node.js + MongoDB + React]
+- **Database**: [HAS_DATABASE = true/false] | [DB_TYPE = MongoDB/PostgreSQL/Redis/None]
+
+---
+
+## MANDATORY FIRST STEP — Read Before Every Task
+
+**Before responding to ANY user request, you MUST:**
+
+1. Read `.ai/INDEX.md` (the skill routing index).
+2. Identify the task type from the user's request.
+3. Read ONLY the skill files listed for that task type.
+4. Then proceed with the implementation.
+
+> ⚠️ Proceeding without reading the required skill files is a protocol violation.
+> If you have not read at least one skill file before responding to a code task, STOP and read `.ai/INDEX.md` first.
+
+---
+
+## Always-On Rules (Apply to Every Task, No Exceptions)
+
+These rules are active at all times regardless of task type:
+
+1. **Trust Boundary**: All Red Zone operations require explicit user authorization before execution. See `sop.md` for the full list and authorized keywords.
+2. **No Autonomous Git**: Never run `git add`, `git commit`, or `git push` without explicit user instruction.
+3. **No Autonomous Package Management**: Never run `npm install` or `npm uninstall` without explicit user approval.
+4. **No Hardcoded Secrets**: Never write API keys, passwords, or secrets directly in source code.
+5. **Language Alignment**: Match the language used by the user (Traditional Chinese if the user writes in Chinese).
+6. **Conciseness**: No pleasantries, no unnecessary flattery. Conclusions and actions first.

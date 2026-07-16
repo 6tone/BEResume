@@ -12,9 +12,9 @@ Kaohsiung, Taiwan | contact.6tone@gmail.com | [github.com/6tone](https://github.
 **技術專案經理 (TPM) / 資深後端顧問**, 獨立接案 (Freelance)
 Feb 2024 - Present
 *Node.js (Express) / Pomelo.js / Redis / PostgreSQL / MongoDB / Docker / AWS / Jenkins (CI/CD)*
-* 擔任 TPM 協調美術、企劃、前後端等全遠端外包團隊，主導多人線上遊戲平台的技術選型與架構設計，並透過 Jenkins 建置 CI/CD 自動化部署流程，於時程與預算限制下完成專案交付。
-* 基於 Express 與 MongoDB 開發自研遊戲組件，設計單點登入 (SSO) 身分驗證機制並集成至合作平台，縮短對接時程。
-* 使用 Node.js 開發即時數據爬蟲與聚合計算引擎，實作監控水位之自動化避險交易系統，透過 Docker 部署減少人工操作時間差，降低資金曝險。
+* 擔任 TPM 協調美術、企劃、前後端等全遠端外包團隊，主導多人線上平台的技術選型與架構設計，並透過 Jenkins 建置 CI/CD 自動化部署流程，於時程與預算限制下完成專案交付。
+* 基於 Express 與 MongoDB 開發自研伺服器邏輯組件，設計單點登入 (SSO) 身分驗證機制並集成至合作平台，縮短對接時程。
+* 使用 Node.js 開發即時數據監控與聚合計算引擎，實作監控交易之自動化避險交易系統，透過 Docker 部署減少人工操作時間差，降低資金曝險。
 * 擔任技術審查窗口，審核委外平台之系統設計、資料庫 Schema 及時程合理性，協助業主優化開發成本與時程。
 
 **後端組長 / 後端工程師**, 盛欣網絡 (Shengxin Network)
